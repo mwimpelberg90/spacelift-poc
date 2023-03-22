@@ -1,10 +1,10 @@
 # Terraform stack using github.com as VCS
-resource "spacelift_stack" "k8s-cluster" {
+resource "spacelift_stack" "ec2_instance" {
   administrative    = false
   autodeploy        = true
   branch            = "main"
-  description       = "Provisions a Kubernetes cluster"
-  name              = "Kubernetes Cluster"
+  description       = "Build an EC2 Instance"
+  name              = "EC2 Instance"
   project_root      = "ec2_instance/"
   repository        = "spacelift-poc"
   terraform_version = "1.4.0"
