@@ -1,1 +1,5 @@
-provider "spacelift" {}
+required_providers {
+    spacelift = {
+      source  = "spacelift.io/spacelift"
+    }
+  }
