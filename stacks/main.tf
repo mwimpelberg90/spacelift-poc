@@ -10,3 +10,4 @@ resource "spacelift_stack" "ec2_instance" {
   terraform_version = "1.4.0"
   space_id = "dev-01GW05MHFJSEA7ZCA7TKKSAGKD"
 }
+
