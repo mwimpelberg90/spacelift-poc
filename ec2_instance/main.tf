@@ -1,13 +1,14 @@
-resource "aws_instance" "web" {
-  ami           = "ami-0557a15b87f6559cf"
-  instance_type = "t3.micro"
-  ebs_block_device {
-      device_name = "xvdb"
-      volume_type = "gp3"
-      volume_size = 10
-      encrypted   = true
-    }
+module "ec2_instance" {
+  source  = "git@github.com:mwimpelberg22/terraform-aws-ec2-instance.git"
+
+
+  name = "single-instance"
+
+  ami                    = "ami-0557a15b87f6559cf"
+  instance_type          = "t3.micro"
+
   tags = {
-    Name = "HelloWorld"
+    Terraform   = "true"
+    Environment = "dev"
   }
 }
