@@ -1,14 +1,13 @@
-module "ec2_instance" {
-  source  = "spacelift.io/mwimpelberg290/terraform-aws-ec2-instance/spacelift-aws"
-
-
-  name = "single-instance"
-
-  ami                    = "ami-0557a15b87f6559cf"
-  instance_type          = "t3.micro"
-
+resource "aws_instance" "web" {
+  ami           = "ami-0557a15b87f6559cf"
+  instance_type = "t3.micro"
+  ebs_block_device {
+      device_name = "xvdb"
+      volume_type = "gp3"
+      volume_size = 10
+      encrypted   = true
+    }
   tags = {
-    Terraform   = "true"
-    Environment = "dev"
+    Name = "HelloWorld"
   }
 }
