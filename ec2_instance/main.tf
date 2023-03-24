@@ -1,5 +1,5 @@
 module "ec2_instance" {
-  source  = "git@github.com:mwimpelberg22/terraform-aws-ec2-instance.git"
+  source  = "spacelift.io/mwimpelberg290/ec2-instance-module"
 
 
   name = "single-instance"
