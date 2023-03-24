@@ -1,5 +1,5 @@
 module "ec2_instance" {
-  source  = "spacelift.io/mwimpelberg290/ec2-instance-module/spacelift-aws"
+  source  = "spacelift.io/mwimpelberg290/terraform-aws-ec2-instance/spacelift-aws"
 
 
   name = "single-instance"
